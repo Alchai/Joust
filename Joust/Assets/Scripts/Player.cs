@@ -28,8 +28,9 @@ public class Player : MonoBehaviour
     void InputCheck()
     {
         //Testing jump, will change based on moblie device
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            //TODO: Only allow jump certain number of times before colliding with the ground?
             this.rigidbody.AddForce(Vector3.up * JumpForceScaler);
         }
 
